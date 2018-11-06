@@ -1,8 +1,10 @@
+
+import tools
+
 # 无限循环
 while True:
 
-    # 显示功能菜单
-
+    tools.show_menu()
     action_str = input("请选择希望进行的操作：")
     print("您选择的操作是【%s】"% action_str)
 
@@ -10,7 +12,16 @@ while True:
     if action_str in ["1","2","3"]:
 
         # 新增名片
-        pass
+        if action_str == "1":
+            tools.new_card()
+        # 显示全部
+        elif action_str == "2":
+            tools.show_all()
+        # 查询名片
+        elif action_str == "3":
+            tools.search_card()
+
+
 
     # 0 退出系统
     elif action_str == "0":
